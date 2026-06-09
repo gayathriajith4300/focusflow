@@ -12,6 +12,7 @@ function saveNotes() {
 function createNote(note) {
 
     const notecard = document.createElement("div");
+    notecard.classList.add("note-card");
 
     const notetitle = document.createElement("h3");
     notetitle.textContent = note.title;
@@ -51,13 +52,12 @@ if (savedNotes) {
     notes.forEach(function (note) {
         createNote(note);
     });
-
 }
 
 savebtn.addEventListener("click", function () {
 
-    const title = titleinput.value;
-    const content = noteinput.value;
+    const title = titleinput.value.trim();
+    const content = noteinput.value.trim();
 
     if (title === "") {
         alert("Enter the title");
@@ -77,5 +77,4 @@ savebtn.addEventListener("click", function () {
 
     titleinput.value = "";
     noteinput.value = "";
-
 });
