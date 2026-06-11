@@ -5,35 +5,59 @@
 }
 
 body{
-    font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #111827,
+        #052e16
+    );
     min-height: 100vh;
     text-align: center;
     padding: 50px;
     color: white;
 }
 
+/* Heading */
+
 h1{
-    font-size: 50px;
-    color:black;
-    font-weight: 700;
+    font-size: 4rem;
+    color: #4ade80;
+    letter-spacing: 3px;
+    font-weight: 800;
     margin-bottom: 20px;
+
+    text-shadow:
+        0 0 5px rgba(74, 222, 128, 0.7),
+        0 0 15px rgba(74, 222, 128, 0.4),
+        0 0 30px rgba(74, 222, 128, 0.2);
 }
+
+/* Back button */
 
 a{
     display: inline-block;
     text-decoration: none;
-    color: #333;
-    background-color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
+    color: #4ade80;
+    background: rgba(74, 222, 128, 0.1);
+    border: 1px solid rgba(74, 222, 128, 0.3);
+    padding: 12px 24px;
+    border-radius: 30px;
     font-weight: 600;
     margin-bottom: 40px;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
+
 a:hover{
-    background-color: rgb(219, 137, 254);
+    transform: translateY(-3px);
+
+    background: rgba(74, 222, 128, 0.2);
+
+    box-shadow:
+        0 0 15px rgba(74, 222, 128, 0.3);
 }
+
+/* Input area */
 
 .input-section{
     margin-bottom: 30px;
@@ -41,140 +65,141 @@ a:hover{
 
 #task-input{
     width: 350px;
-    padding: 14px;
+    padding: 14px 18px;
     font-size: 16px;
-    border: none;
-    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 20px;
     outline: none;
-    background-color: white;
+
+    background: rgba(255,255,255,0.08);
+
+    color: white;
+
+    backdrop-filter: blur(10px);
 }
 
+#task-input::placeholder{
+    color: rgba(255,255,255,0.6);
+}
+
+/* Add button */
+
 #add-btn{
+    font-family: 'Poppins', sans-serif;
+    background: #4ade80;
+    color: #111827;
     padding: 14px 24px;
-    margin-left: 10px;
-    border: none;
-    border-radius: 12px;
-    background-color: #4f46e5;
-    color:black;
-    cursor: pointer;
+    margin-left: 12px;
     font-size: 16px;
     font-weight: 600;
-    transition: 0.3s;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
 #add-btn:hover{
-    background-color: #4338ca;
-    transform: scale(1.05);
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 15px rgba(74, 222, 128, 0.5);
 }
+
+/* Task container */
 
 #task-list{
     width: 550px;
-    margin: 0 auto;
+
+    margin: 30px auto;
+
+    padding: 0;
+
     list-style: none;
 }
 
+/* Task cards */
+
 #task-list li{
     display: flex;
+
     align-items: center;
+
     gap: 15px;
-    background-color: white;
-    color: #222;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    transition: 0.3s;
+
+    margin: 16px 0;
+
+    padding: 18px 20px;
+
+    border-radius: 18px;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    backdrop-filter: blur(12px);
+
+    transition: 0.3s ease;
 }
 
 #task-list li:hover{
-    transform: translateY(-3px);
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(74, 222, 128, 0.15);
 }
+
+/* Task text */
 
 #task-list span{
     flex: 1;
+
     text-align: left;
-    font-size: 20px;
+
+    color: white;
+
+    font-size: 18px;
 }
+
+/* Checkbox */
 
 input[type="checkbox"]{
-    transform: scale(1.5);
+    transform: scale(1.4);
+
     cursor: pointer;
+
+    accent-color: #4ade80;
 }
 
+/* Delete button */
+
 #task-list button{
-    background-color: #ef4444;
-    color: black;
+    padding: 10px 16px;
+
     border: none;
-    padding: 8px 14px;
-    border-radius: 8px;
+
+    border-radius: 12px;
+
     cursor: pointer;
+
+    background: #ef4444;
+
+    color: white;
+
     font-weight: 600;
-    transition: 0.3s;
+
+    transition: 0.3s ease;
 }
 
 #task-list button:hover{
-    background-color: #dc2626;
-}
-#task-input{
-    width: 300px;
-    padding: 12px;
-    font-size: 16px;
-    border: none;
-    border-radius: 8px;
-    background-color: white;
+    background: #dc2626;
+
+    transform: scale(1.05);
 }
 
-#add-btn{
-    padding: 12px 20px;
-    margin-left: 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    background-color: rgb(255, 170, 170);
-}
+/* Completed task */
 
-#add-btn:hover{
-    background-color: rgb(255, 120, 120);
-}
+.completed{
+    text-decoration: line-through;
 
-#task-list{
-    width: 500px;
-    margin: 30px auto;
-    padding: 20px;
-    list-style: none;
-}
-
-#task-list li{
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin: 12px 0;
-    background-color: white;
-    padding: 12px;
-    border-radius: 10px;
-}
-
-#task-list span{
-    flex: 1;
-    text-align: left;
-}
-
-input[type="checkbox"]{
-    transform: scale(1.5);
-    cursor: pointer;
-}
-
-#task-list button{
-    padding: 8px 12px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    background-color: rgb(255, 170, 170);
-    font-weight: 600;
-}
-
-#task-list button:hover{
-    background-color: rgb(255, 120, 120);
+    opacity: 0.6;
 }

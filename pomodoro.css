@@ -20,6 +20,23 @@ h1{
     font-size: 40px;
     margin-bottom: 60px;
 }
+
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    transition: 0.3s;
+}
+a:hover{
+    background-color: rgb(60, 10, 175);
+    color:white;
+}
+
 .option{
     
     margin-bottom: 40px;

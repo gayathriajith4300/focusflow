@@ -23,6 +23,12 @@ function createNote(note) {
     const deletebtn = document.createElement("button");
     deletebtn.textContent = "Delete";
 
+    const notebody = document.createElement("div");
+    notebody.classList.add("note-body");
+
+    notebody.appendChild(notetitle);
+    notebody.appendChild(notecontent);
+
     deletebtn.addEventListener("click", function () {
 
         notecard.remove();
@@ -36,8 +42,7 @@ function createNote(note) {
         saveNotes();
     });
 
-    notecard.appendChild(notetitle);
-    notecard.appendChild(notecontent);
+    notecard.appendChild(notebody);
     notecard.appendChild(deletebtn);
 
     notecontainerinput.appendChild(notecard);
