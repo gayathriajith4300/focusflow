@@ -1,100 +1,186 @@
 
 *{
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-   
 }
+
 body{
-    
-    padding:50px;
-    font-family: 'Montserrat',sans-serif;
-    background:linear-gradient(135deg,#667eea,#764ba2);
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(20, 1, 1);
+    min-height: 100vh;
+    padding: 50px;
     text-align: center;
     color: white;
-    min-height: 100vh;
-
-    
 }
-h1{ 
-    font-size: 40px;
-    margin-bottom: 60px;
+
+
+h1{
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: rgb(255, 95, 95);
+    margin-bottom: 25px;
+
+    text-shadow:
+        0 0 5px rgba(255, 95, 95, 0.7),
+        0 0 15px rgba(255, 95, 95, 0.5),
+        0 0 30px rgba(255, 95, 95, 0.3);
 }
 
 a{
     display: inline-block;
     text-decoration: none;
-    color: #333;
-    background-color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
+    color: rgb(255, 95, 95);
+
+    background: rgba(255, 95, 95, 0.1);
+    border: 1px solid rgba(255, 95, 95, 0.3);
+
+    padding: 12px 24px;
+    border-radius: 30px;
+
     font-weight: 600;
-    margin-bottom: 40px;
-    transition: 0.3s;
+    margin-bottom: 50px;
+
+    transition: 0.3s ease;
 }
+
 a:hover{
-    background-color: rgb(60, 10, 175);
-    color:white;
+    transform: translateY(-3px);
+
+    background: rgba(255, 95, 95, 0.15);
+
+    box-shadow:
+        0 0 15px rgba(255, 95, 95, 0.4);
 }
 
 .option{
-    
-    margin-bottom: 40px;
     display: flex;
     justify-content: center;
-    gap:40px
-    
+    gap: 25px;
+    margin-bottom: 50px;
 }
-#pomodoro{
-    font-size: 25px;
-    background-color: rgb(124, 183, 216);
-    color:black;
-    border-radius: 20px;
-    width:250px;
-    height:60px;
-    border:none;
 
-}
+#pomodoro,
 #shortbreak{
-    font-size: 25px;
-    background-color: rgb(124, 183, 216);
-    color:black;
-    border-radius: 20px;
-    width:250px;
-    height:60px;
-    border:none;
+    width: 220px;
+    padding: 16px;
 
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
-.display{
-    display:flex;
-    justify-content: center;
-    gap:40px;}
+#pomodoro:hover,
+#shortbreak:hover{
+    transform: translateY(-4px);
 
+    border-color: rgba(255, 95, 95, 0.5);
+
+    box-shadow:
+        0 0 20px rgba(255, 95, 95, 0.3);
+}
 
 #timer-display{
-    font-size: 100px;
-    text-align: center;
-    margin-bottom:40px;
-}
-#start{
-    font-size: 30px;
-    background-color: rgb(124, 183, 216);
-    color:black;
-    border-radius: 20px;
-    width:90px;
-    height:50px;
-    border:none;
+    font-size: 8rem;
+    font-weight: 600;
 
+    margin-bottom: 50px;
+
+    color: rgb(255, 245, 235);
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.1);
 }
+
+
+
+.display{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+#start,
 #reset{
-    font-size: 30px;
-    background-color: rgb(124, 183, 216);
-    color:black;
-    border-radius: 20px;
-    width:90px;
-    height:50px;
-    border:none;
+    padding: 14px 32px;
+
+    border: none;
+    border-radius: 16px;
+
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#start{
+    background: rgba(255, 95, 95, 0.15);
+    color: rgb(255, 95, 95);
+
+    border: 1px solid rgba(255, 95, 95, 0.4);
+}
+
+#start:hover{
+    transform: translateY(-4px);
+
+    background: rgb(255, 95, 95);
+    color: white;
+
+    box-shadow:
+        0 0 20px rgba(255, 95, 95, 0.5);
+}
+
+#reset{
+    background: rgba(255,255,255,0.08);
+    color: white;
+
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+#reset:hover{
+    transform: translateY(-4px);
+
+    background: rgba(255,255,255,0.15);
+
+    box-shadow:
+        0 0 15px rgba(255,255,255,0.15);
+}
 
 
+@media (max-width: 768px){
+
+    h1{
+        font-size: 3rem;
+    }
+
+    #timer-display{
+        font-size: 5rem;
+    }
+
+    .option{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #pomodoro,
+    #shortbreak{
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .display{
+        flex-direction: column;
+        align-items: center;
+    }
 }
