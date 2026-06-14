@@ -1,4 +1,4 @@
-#FocusFlow
+# FocusFlow
 
 FocusFlow is a productivity web application built using HTML, CSS, and JavaScript. It brings essential productivity tools together in one place, helping users stay organized and focused without switching between multiple applications.
 
