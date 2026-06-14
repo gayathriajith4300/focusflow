@@ -174,3 +174,67 @@ a:hover{
     background-color: #ec6363;
     color: white;
 }
+@media (max-width: 375px){
+
+    h1{
+        font-size: 2.5rem;
+    }
+
+    #note-title,
+    #note-content,
+    .note-card{
+        max-width: 280px;
+    }
+
+    #save-btn{
+        width: 140px;
+    }
+
+    .note-card h3{
+        font-size: 20px;
+    }
+
+    .note-card p{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 425px) {
+
+    body {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .note-input {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    #note-title,
+    #note-content,
+    #save-btn {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    #note-content {
+        height: 120px;
+    }
+
+    .note-card {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        min-height: 250px;
+    }
+
+    .note-body {
+        max-height: 180px;
+        overflow-y: auto;
+    }
+}

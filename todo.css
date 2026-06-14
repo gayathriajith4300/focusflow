@@ -18,7 +18,6 @@ body{
     color: white;
 }
 
-/* Heading */
 
 h1{
     font-size: 4rem;
@@ -33,7 +32,7 @@ h1{
         0 0 30px rgba(74, 222, 128, 0.2);
 }
 
-/* Back button */
+
 
 a{
     display: inline-block;
@@ -57,7 +56,7 @@ a:hover{
         0 0 15px rgba(74, 222, 128, 0.3);
 }
 
-/* Input area */
+
 
 .input-section{
     margin-bottom: 30px;
@@ -82,7 +81,6 @@ a:hover{
     color: rgba(255,255,255,0.6);
 }
 
-/* Add button */
 
 #add-btn{
     font-family: 'Poppins', sans-serif;
@@ -105,7 +103,7 @@ a:hover{
         0 0 15px rgba(74, 222, 128, 0.5);
 }
 
-/* Task container */
+
 
 #task-list{
     width: 550px;
@@ -117,7 +115,7 @@ a:hover{
     list-style: none;
 }
 
-/* Task cards */
+
 
 #task-list li{
     display: flex;
@@ -148,7 +146,7 @@ a:hover{
         0 10px 25px rgba(74, 222, 128, 0.15);
 }
 
-/* Task text */
+
 
 #task-list span{
     flex: 1;
@@ -160,7 +158,7 @@ a:hover{
     font-size: 18px;
 }
 
-/* Checkbox */
+
 
 input[type="checkbox"]{
     transform: scale(1.4);
@@ -196,14 +194,14 @@ input[type="checkbox"]{
     transform: scale(1.05);
 }
 
-/* Completed task */
+
 
 .completed{
     text-decoration: line-through;
 
     opacity: 0.6;
 }
-@media (max-width: 425px) {
+@media (max-width: 450px) {
 
     body {
         padding: 30px 15px;
@@ -231,7 +229,7 @@ input[type="checkbox"]{
         width: 100%;
         max-width: 300px;
         font-size: 15px;
-        margin-bottom:30px;
+        ;
     }
 
     #add-btn {
@@ -264,4 +262,63 @@ input[type="checkbox"]{
         font-size: 14px;
         border-radius: 10px;
     }
+}
+
+
+@media (max-width: 425px){
+
+    body{
+        padding: 25px 15px;
+    }
+
+    h1{
+        font-size: 3rem;
+    }
+
+    /* Input Section */
+
+    .input-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    #task-input{
+        width: 100%;
+        max-width: 320px;
+    }
+
+    #add-btn{
+        width: 160px;
+        margin-left: 0;
+    }
+
+    /* Task Container */
+
+    #task-list{
+        width: 100%;
+        max-width: 350px;
+    }
+
+    /* Task Cards */
+
+    #task-list li{
+        padding: 15px;
+        gap: 10px;
+    }
+
+    /* Task Text */
+
+    #task-list span{
+        font-size: 16px;
+    }
+
+    /* Delete Button */
+
+    #task-list button{
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
 }

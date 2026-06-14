@@ -183,4 +183,8 @@ a:hover{
         flex-direction: column;
         align-items: center;
     }
+
+@media (max-width:480px){ 
+    h1{font-size:2.5rem;}
+}
 }
