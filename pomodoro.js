@@ -54,7 +54,6 @@ startBtn.addEventListener("click", function () {
             timerDisplay.textContent =
                 String(minutes).padStart(2, "0") + ":" +
                 String(seconds).padStart(2, "0");
-
             if (timeLeft === 0) {
 
                 clearInterval(timer);
